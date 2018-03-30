@@ -1,0 +1,23 @@
+
+npm init
+
+//compile.js
+
+npm install --save fs-extra ganache-cli mocha solc web3@1.0.0-beta.33
+
+node compile.js// compile Kickstart.sol and creates : build/Campaign.json, build/CampaignFactory.json
+
+npm run test // ... },"scripts": {"test": "mocha"},...
+
+
+// deploy.js
+
+npm install --save truffle-hdwallet-provider
+
+node deploy.js
+
+//install Next.js, react AND react-dom
+
+npm install --save next@4.1.4 react react-dom
+
+//</Next.js //framework
