@@ -13,11 +13,10 @@ class CampaignIndex extends Component{
         const campaigns = await factory.methods.getDeployedCampaigns().call();
         return {campaigns};
     }
-//    async componentDidMount(){
-//        console.log(' --- campaigns = ', campaigns);
-//    }
     render(){
-        return <div>Campaign Index!<div>{this.props.campaigns}</div></div>;
+        return <div>Campaign Index!
+    <div>{this.props.campaigns}</div>
+</div>;
     }
 }
 ;

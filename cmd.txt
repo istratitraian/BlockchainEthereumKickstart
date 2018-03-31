@@ -22,7 +22,7 @@ node deploy.js
 
 // install Next.js, react AND react-dom
 
-npm install --save next@4.1.4 react react-dom
+npm install --save next@4.2.3 react react-dom
 
 
 # create dir "pages/", and pages/index.js with content{ 
@@ -37,3 +37,9 @@ import React from 'react'; export default () =>{
 //</Next.js //framework
 
 GAS 554435 == 0.000554 ETH
+
+
+//// Instead of CSS we use Semantic-UI 
+
+npm install --save semantic-ui-react
+
