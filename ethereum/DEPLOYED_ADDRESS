@@ -1,1 +1,10 @@
-0xaBc79Ee9Df4CF84FF451aC3996c5cf020bCeF656
+0xaBc79Ee9Df4CF84FF451aC3996c5cf020bCeF656  contract 1
+
+0xFCD00AE7E89331AA2D23c6c9F9b3f5F79CEE3289  contract 2
+
+# add this in factory.js
+
+const instance = new web3.eth.Contract(
+        JSON.parse(CampaignFactory.interface),
+        '0xaBc79Ee9Df4CF84FF451aC3996c5cf020bCeF656'
+        );

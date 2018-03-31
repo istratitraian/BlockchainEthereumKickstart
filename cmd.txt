@@ -16,8 +16,24 @@ npm install --save truffle-hdwallet-provider
 
 node deploy.js
 
-//install Next.js, react AND react-dom
+# save deployed ADDRESS
+
+
+
+// install Next.js, react AND react-dom
 
 npm install --save next@4.1.4 react react-dom
 
+
+# create dir "pages/", and pages/index.js with content{ 
+import React from 'react'; export default () =>{
+        return <h2>Index.js page </h2>;
+};
+}
+# and also add to "package.json" // ... },"scripts": {..., "dev":"next dev"},...
+
+> npm run dev
+
 //</Next.js //framework
+
+GAS 554435 == 0.000554 ETH
