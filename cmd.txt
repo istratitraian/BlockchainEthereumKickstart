@@ -23,7 +23,7 @@ node deploy.js
 // install Next.js, react AND react-dom
 
 npm install --save next@4.2.3 react react-dom
-
+npm install --save next-routes //http://app/0x123address
 
 # create dir "pages/", and pages/index.js with content{ 
 import React from 'react'; export default () =>{

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import{Card,Button} from 'semantic-ui-react';
 import factory from '../ethereum/factory';
 import Layout from '../components/layout'
+import {Link,Router} from '../routes';
 // Here we use Next.js
 
 class CampaignIndex extends Component{
@@ -28,7 +29,6 @@ class CampaignIndex extends Component{
     render(){
         return <Layout>
                     <h3>Open Campaign</h3>
-                    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
                     <Button primary floated="right" content='New Contract' icon='plus circle' labelPosition='right'  />
                     <div>{this.renderCampaigns()}</div>
                 </Layout>;
