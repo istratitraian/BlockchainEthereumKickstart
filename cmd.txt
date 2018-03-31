@@ -40,6 +40,10 @@ GAS 554435 == 0.000554 ETH
 
 
 //// Instead of CSS we use Semantic-UI 
+///https://react.semantic-ui.com/usage
+npm install --save semantic-ui-react 
+npm install --save semantic-ui-css 
 
-npm install --save semantic-ui-react
+//import 'semantic-ui-css/semantic.min.css'; // Does not work with Next.js
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
 
