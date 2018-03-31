@@ -9,17 +9,18 @@ class CampaignIndex extends Component{
 //
 //    };
 
-    static
-
-    async componentDidMount(){
+    static async getInitialProps(){
         const campaigns = await factory.methods.getDeployedCampaigns().call();
-        console.log(' --- campaigns = ', campaigns);
+        return {campaigns};
     }
-    
+//    async componentDidMount(){
+//        console.log(' --- campaigns = ', campaigns);
+//    }
     render(){
-        return <div>Campaign Index!</div>;
+        return <div>Campaign Index!<div>{this.props.campaigns}</div></div>;
     }
-};
+}
+;
 
 export default CampaignIndex;
 
