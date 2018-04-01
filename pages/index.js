@@ -20,18 +20,28 @@ class CampaignIndex extends Component{
        const items =  this.props.campaigns.map(address => {
             return {
                 header: address,
-                description:<a>View Campaign</a>,
+                description:(
+                        <Link route={`/campaigns/${address}`}>
+                        <a className="item">View Campaign</a>
+                        </Link>
+                        ),
                 fluid: true
             };
         });
         return <Card.Group centered items={items} />;
     }
     render(){
-        return <Layout>
+        return (
+                <Layout>
                     <h3>Open Campaign</h3>
+                    <Link route="/campaigns/new">
+                   <a >
                     <Button primary floated="right" content='New Contract' icon='plus circle' labelPosition='right'  />
+                    </a>
+                    </Link>
                     <div>{this.renderCampaigns()}</div>
-                </Layout>;
+                </Layout>
+                );
     }
 }
 ;

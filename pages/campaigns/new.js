@@ -46,7 +46,7 @@ class CampaignNew extends Component{
                         </Form.Field>
                         
                         <Message error header='Bad Number' content={this.state.errorMessage}/>
-                    
+                        
                         <Button primary loading={this.state.isLoading} type='submit'>Create!</Button>
                     </Form>
                 

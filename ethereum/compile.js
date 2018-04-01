@@ -6,16 +6,17 @@ const solc = require('solc');
 const fs = require('fs-extra');
 
 const buildPath = path.resolve(__dirname, 'build');
-
-
 const campaignPath = path.resolve(__dirname, 'contracts', 'Kickstart.sol');
+
 const source = fs.readFileSync(campaignPath, 'utf8');
+
 const contracts = solc.compile(source, 1).contracts;
 
 fs.removeSync(buildPath);
 fs.ensureDirSync(buildPath);
 
 for(let contract in contracts){
+    console.log(contract);
     fs.outputJsonSync(
             path.resolve(buildPath, contract.replace(':', '') + '.json'),
             contracts[contract]
