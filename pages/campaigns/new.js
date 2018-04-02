@@ -1,6 +1,6 @@
 import { Form, Button,Input,Message } from 'semantic-ui-react';
 import React, {Component} from 'react';
-import factory from '../../ethereum/factory';
+import Factory from '../../ethereum/factory';
 import Layout from '../../components/layout'
 import web3 from '../../ethereum/web3_local';
 import {Router} from '../../routes';
@@ -10,7 +10,7 @@ class CampaignNew extends Component{
     
      state = {
         errorMessage:'',
-        isLoading:false,
+        loading:false,
         minimumContribution:'100'
     }
     
@@ -20,7 +20,7 @@ class CampaignNew extends Component{
      try{
         this.setState({isLoading:true});
         const accounts = await web3.eth.getAccounts();
-        await factory.methods.createCampaign(this.state.minimumContribution).send({
+        await Factory.methods.createCampaign(this.state.minimumContribution).send({
             from:accounts[0]
         });
         Router.pushRoute('/');
@@ -47,7 +47,7 @@ class CampaignNew extends Component{
                         
                         <Message error header='Bad Number' content={this.state.errorMessage}/>
                         
-                        <Button primary loading={this.state.isLoading} type='submit'>Create!</Button>
+                        <Button primary loading={this.state.loading} type='submit'>Create!</Button>
                     </Form>
                 
                 </Layout>
