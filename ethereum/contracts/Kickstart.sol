@@ -26,7 +26,7 @@ string description;
 Request[] public requests;
         address public manager;
         uint public minimumContribution;
-        // address[] public approvers; 
+        // address[] public approvers;
         mapping(address => bool) public approvers;
         uint public approvalsCount;
         modifier onlyManager(){
@@ -58,6 +58,7 @@ description:description,
         approvalCount:0
         }));
         }
+
 
 
 function approveRequest(uint reqIndex) public{
